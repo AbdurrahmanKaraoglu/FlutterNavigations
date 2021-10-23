@@ -62,6 +62,13 @@ class RedPage extends StatelessWidget {
                 child: Text('Go to Blue'),
                 style: ElevatedButton.styleFrom(primary: Colors.blue),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/purplePage');
+                },
+                child: Text('Go to Purple'),
+                style: ElevatedButton.styleFrom(primary: Colors.purple),
+              ),
             ],
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_navigations/route_generator.dart';
 
 class OgrenciListesi extends StatelessWidget {
   const OgrenciListesi({Key? key}) : super(key: key);
@@ -21,6 +22,10 @@ class OgrenciListesi extends StatelessWidget {
             ),
             title: Text(tumOgrenciler[index].isim.toString()),
             subtitle: Text(tumOgrenciler[index].soyisim.toString()),
+            onTap: () {
+              var secilenOgrenci = tumOgrenciler[index];
+              Navigator.pushNamed(context, '/ogrenciDetay', arguments: secilenOgrenci);
+            },
           );
         },
         itemCount: elemanSayisi,

@@ -47,6 +47,17 @@ class AnaSayfa extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            Text(
+              "Home Page",
+              style: TextStyle(fontSize: 28),
+            ),
+            Divider(
+              color: Colors.black,
+              height: 20,
+              endIndent: 30,
+              indent: 30,
+              thickness: 2,
+            ),
             ElevatedButton(
               onPressed: () async {
                 int? _gelenSayi = await Navigator.push(
@@ -116,7 +127,21 @@ class AnaSayfa extends StatelessWidget {
                 Navigator.of(context).pushNamed('/ogrenciListesi', arguments: 60);
               },
               child: Text('Liste Oluştur'),
-              style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+              style: ElevatedButton.styleFrom(primary: Colors.green),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/purplePage');
+              },
+              child: Text('Mor Sayfaya Git'),
+              style: ElevatedButton.styleFrom(primary: Colors.purple),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/greenPage');
+              },
+              child: Text('Yeşil Sayfaya Git'),
+              style: ElevatedButton.styleFrom(primary: Colors.green),
             ),
           ],
         ),
